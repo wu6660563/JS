@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分页</title>
+		<link rel="stylesheet" href="pager.css" />
+		<script type="text/javascript" src="jquery-1.11.1.min.js" ></script>
+	</head>
+	<body>
+		<!--分页开始-->
+		<div class="pageBox">
+			<span class="pageSpan"></span>
+		</div>
+	</body>
+	<script type="text/javascript" src="pager.js" ></script>
+	<script>
+	$(function() {
+		//分页
+		$(".pageSpan").createPage({
+			pageIndex:8,
+			totalPage:22,
+			backFn:function(pageIndex){
+				console.log(pageIndex);
+			}
+		});
+	});
+	</script>
+</html>
